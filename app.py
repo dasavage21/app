@@ -5,8 +5,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 app.secret_key = "5ca0ddc4-d5ea-4b09-815f-cc58f5d236af"
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///site.db'
-HEROKU_OAUTH_ID="247f6643-5eaf-4698-b0c4-58e95dde39d6"
-HEROKU_OAUTH_SECRET="99e9c958-054a-4e2c-92f6-c6aba8898c25"
 db = SQLAlchemy(app)
 
 class User(db.Model):
